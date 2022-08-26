@@ -1,4 +1,5 @@
-    $color_a: rgb(178, 242, 232);
+    @import './_mixins';
+   
 :root{
     --start: 0;
     --end: 0;
@@ -9,28 +10,36 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body {
-    background-color: $color_a;
-
+    background-color: beige;
+    color: white;
 }
 .container{ 
-    width: 100%;
     padding: 10px;
-    background-color: rgb(169, 169, 169);
+    background-color: rgb(84, 46, 18);
 }
 .box__new{
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     padding: 3vh;
+    h1{
+        margin-right: 5vh;
+    }
 }
 h1, h3, h5 {
     font-weight: bold;
 }
 input, button {
     width: 15vw;
-    padding: 10px;
-    border: solid black 2px;
-    margin-left: 10px;
+    @include btn(0px,solid black 2px,0px,10px);
+}
+button:hover{
+    color: black;
+    background-color: beige;
+    border-radius: 0px 10px 10px 0px;
+    transition-property: border-radius;
+    transition-duration: .4s; 
+    cursor: pointer;
 }
 .box__content{
     display: flex;
@@ -40,6 +49,11 @@ input, button {
     h3 {
         font-size: 1.8rem;
         padding: 10px;
+        color: black;
+        background-color: beige;
+        width: 40vw;
+        text-align: center;
+        border-radius: 10px;
     }
 }
 .card{
@@ -50,16 +64,14 @@ input, button {
         padding: 6px;
         text-align: center;
         font-size: 1.5rem;
-        color: white;
-        background-color: rgb(0, 0, 0);
+        background-color: black;
     }
     &-body{
         background-color: rgb(255, 255, 255);
         color: rgb(0, 0, 0);
     }
 }
-
-@keyframes donwContainer {
+    @keyframes donwContainer {
     from { 
         height: var(--start);
     }
