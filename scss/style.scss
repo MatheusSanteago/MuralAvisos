@@ -52,23 +52,26 @@ button:hover{
         color: black;
         background-color: beige;
         width: 40vw;
+        min-width: 120px;
         text-align: center;
         border-radius: 10px;
     }
 }
 .card{
     width: 80vw;
+    min-width: 200px;
     margin: 10px;
-    border: solid black 2px;
     &-header, &-body{
         padding: 6px;
         text-align: center;
         font-size: 1.5rem;
         background-color: black;
+        border-radius: 10px 10px 0px 0px;
     }
     &-body{
         background-color: rgb(255, 255, 255);
         color: rgb(0, 0, 0);
+        border-radius: 0px 0px 10px 10px;
     }
 }
     @keyframes donwContainer {
@@ -79,7 +82,25 @@ button:hover{
         height: var(--end);
     }
 }
+
 .container__animation{
     animation: donwContainer .15s ease-in-out 1;
     transition: animation;
+}
+
+@media screen and (max-width: 425px){
+    .box__new{
+        text-align: center;
+       flex-direction: column;
+       align-items: center;
+       h1{
+        margin: 0;
+        padding: 10px;
+       }
+    }
+    input, button {
+        width: 40vw;
+        margin: 2px;
+        @include btn(0px,solid black 2px,0px,10px);
+    }
 }

@@ -53,21 +53,24 @@ button:hover {
     color: black;
     background-color: beige;
     width: 40vw;
+    min-width: 120px;
     text-align: center;
     border-radius: 10px; }
 
 .card {
   width: 80vw;
-  margin: 10px;
-  border: solid black 2px; }
+  min-width: 200px;
+  margin: 10px; }
   .card-header, .card-body {
     padding: 6px;
     text-align: center;
     font-size: 1.5rem;
-    background-color: black; }
+    background-color: black;
+    border-radius: 10px 10px 0px 0px; }
   .card-body {
     background-color: white;
-    color: black; }
+    color: black;
+    border-radius: 0px 0px 10px 10px; }
 
 @keyframes donwContainer {
   from {
@@ -78,3 +81,20 @@ button:hover {
 .container__animation {
   animation: donwContainer .15s ease-in-out 1;
   transition: animation; }
+
+@media screen and (max-width: 425px) {
+  .box__new {
+    text-align: center;
+    flex-direction: column;
+    align-items: center; }
+    .box__new h1 {
+      margin: 0;
+      padding: 10px; }
+  input, button {
+    width: 40vw;
+    margin: 2px;
+    border-radius: 0px;
+    outline: none;
+    border: solid black 2px;
+    margin-left: 0px;
+    padding: 10px; } }
