@@ -14,5 +14,14 @@
     "express": "^4.18.1",
     "node-sass": "^7.0.1"
   },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatheusSanteago/MuralAvisos.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MatheusSanteago/MuralAvisos/issues"
+  },
+  "homepage": "https://github.com/MatheusSanteago/MuralAvisos#readme",
   "description": ""
 }

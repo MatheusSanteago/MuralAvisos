@@ -1,11 +1,7 @@
+const { post } = require("../routes/api");
+
 module.exports = {
-    posts: [
-        {
-            id: "adad",
-            title: "Teste",
-            description: "Descrição"
-        },
-    ],
+    posts: [],
 
     getAll(){
         return this.posts;
@@ -13,8 +9,7 @@ module.exports = {
     
     newPost(title, description){
         this.posts.push({id: generateID(), title, description});
-    }
-
+    },
 
 };
 
